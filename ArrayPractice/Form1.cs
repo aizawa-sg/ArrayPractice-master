@@ -106,22 +106,29 @@ namespace ArrayPractice
                 && (fpos.Y >= label1.Top)
                 && (fpos.Y < label1.Bottom))
             {
-                timer1.Enabled = false;
+                label1.Visible = false;
             }
             if ((fpos.X >= label2.Left)
                 && (fpos.X < label2.Right)
                 && (fpos.Y >= label2.Top)
                 && (fpos.Y < label2.Bottom))
             {
-                timer1.Enabled = false;
+                label2.Visible = false;
             }
             if ((fpos.X >= label3.Left)
                 && (fpos.X < label3.Right)
                 && (fpos.Y >= label3.Top)
                 && (fpos.Y < label3.Bottom))
             {
+                label3.Visible = false;
+            }
+            if(       (label1.Visible==false)
+                &&(label2.Visible==false)
+                &&(label3.Visible==false))
+            {
                 timer1.Enabled = false;
             }
+
         }
 
         private void scoreLabel_Click(object sender, EventArgs e)
